@@ -1,6 +1,6 @@
 cerbot:
   email: pmarjim089@e.educaand.es
-  url: 
+  url: pm.servepics.com
 
 db:
   user: paula
@@ -8,11 +8,11 @@ db:
   name: wordpress
 
 ip:
-  front1: ""
-  front2: ""
-  back: ""
-  net: ""
-  nfsserver: ""
+  front1: "100.57.185.110"
+  front2: "34.194.138.48"
+  back: "44.216.168.114"
+  net: "98.83.63.91"
+  nfsserver: "98.90.132.253"
 
 wp:
   db_host: 
