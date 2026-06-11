@@ -15,7 +15,7 @@ ip:
   nfsserver: "98.90.132.253"
 
 wp:
-  db_host: 
+  db_host: http://pm.servepics.com/
   path: /var/www/html
   user: paula
   pass: 1234
