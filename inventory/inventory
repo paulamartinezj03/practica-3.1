@@ -1,19 +1,20 @@
 [frontend]
-
+100.57.185.110
+34.194.138.48
 
 [frontend_master]
-
+100.57.185.110
 
 [backend]
-
+44.216.168.114
 
 [loadbalancer]
-
+98.83.63.91
 
 [nfs_server]
-
+98.90.132.253
 
 [all:vars]
 ansible_user=ubuntu
-ansible_ssh_private_key_file=/home/ubuntu/practica-5.1/labsuser.pem
+ansible_ssh_private_key_file=/home/ubuntu/practica-5.1/vockey4.pem
 ansible_ssh_common_args='-o StrictHostKeyChecking=accept-new'
