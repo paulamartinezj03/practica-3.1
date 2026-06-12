@@ -21,10 +21,12 @@
     - name: Crear el usuario de la base de datos
       mysql_user:         
         name: "{{ db.user }}"
-        password: "{{ db.pass }}"
+        #password: "{{ db.pass }}"
+        plugin_auth_string: "{{ db.pass }}"  # <--- Reemplaza 'password' por esto
         priv: "{{ db.name }}.*:ALL"
-        host: "{{ ip.net }}" #Aquí usamos la red completa 172.31.0.0/16
+        host: "%" 
         state: present
+        plugin: caching_sha2_password
         login_unix_socket: /var/run/mysqld/mysqld.sock 
 
     - name: Configuramos MySQL para permitir conexiones desde cualquier interfaz

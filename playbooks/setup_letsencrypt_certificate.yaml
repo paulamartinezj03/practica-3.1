@@ -1,7 +1,7 @@
 ---
 - name: Playbook para configurar HTTPS
   hosts: loadbalancer
-  become: yes
+  become: true
 
   vars_files:
     - ../vars/variables.yaml

@@ -1,7 +1,7 @@
 ---
 - name: Configurar servidor NFS
   hosts: nfs_server
-  become: yes
+  become: true
   vars_files:
     - ../vars/variables.yaml
 
@@ -36,11 +36,17 @@
         group: root
         mode: '0644'
 
-    - name: Configurar la red de exportación en /etc/exports
+    - name: Configurar la red de exportación en /etc/exports para el frontend 1
       replace:
         path: /etc/exports
-        regexp: 'FRONTEND_NETWORK'
-        replace: "{{ ip.net }}"
+        regexp: 'FRONTEND_1'
+        replace: "{{ ip.front1 }}"
+
+    - name: Configurar la red de exportación en /etc/exports para el frontend 2
+      replace:
+        path: /etc/exports
+        regexp: 'FRONTEND_2'
+        replace: "{{ ip.front2 }}"
 
     - name: Reiniciar el servicio NFS
       systemd:
