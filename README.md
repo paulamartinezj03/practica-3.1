@@ -155,5 +155,5 @@ Este **playbook** de **Ansible** se encarga de instalar herramientas adicionales
 9.  **Crear usuario de phpMyAdmin:**
     
     -   Utiliza el módulo `mysql_user` para crear un usuario dedicado a **phpMyAdmin** con privilegios en la base de datos recién creada.
-    ![](/imagen/captura%20IAW.png)
+    [!](/imagen/captura%20IAW.png)
 
